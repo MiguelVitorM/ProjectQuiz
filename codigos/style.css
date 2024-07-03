@@ -1,0 +1,72 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  @keyframes gradientAnimation {  
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+    font-size: 2em;
+  } 
+  
+@font-face {
+    font-family: "MinhaFonte";
+    src: url(../font/gGeruduk.ttf) format(ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+    border-radius: 10%;
+    margin: 0;
+    height: 70vh;
+    width: 80vh;
+    background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+    font-size: 2em;
+}
+
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.nameQuiz{
+    font-family: "fantasy", sans-serif;
+    font-size: 50px;
+}
+
+.menuSobre{
+    box-shadow: #b94a00;
+    margin: 30px;
+}
