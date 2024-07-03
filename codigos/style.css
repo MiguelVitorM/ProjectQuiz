@@ -32,9 +32,11 @@ html {
   
 @font-face {
     font-family: "MinhaFonte";
-    src: url(../font/gGeruduk.ttf) format(ttf);
-    font-weight: normal;
-    font-style: normal;
+    src: url(../font/gGeruduk.ttf);
+}
+@font-face {
+    font-family: "MinhaFonte2";
+    src: url(../font/Lemon\ Shake\ Shake.ttf);
 }
 
 .container{
@@ -62,7 +64,7 @@ html {
   
 
 .nameQuiz{
-    font-family: "fantasy", sans-serif;
+    font-family: MinhaFonte;
     font-size: 50px;
 }
 
