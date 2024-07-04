@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  @keyframes gradientAnimation {  
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+  } 
+  
+@font-face {
+    font-family: "MinhaFonte";
+    src: url(../font/gGeruduk.ttf);
+}
+@font-face {
+    font-family: "MinhaFonte2";
+    src: url(../font/Lemon\ Shake\ Shake.ttf);
+}
+
+.container{
+    border-radius: 10%;
+    margin: 0;
+    height: 70vh;
+    width: 110vh;
+    background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameQuiz{
+    font-family: MinhaFonte;
+    font-size: 40px;
+    text-shadow: 10px 5px 20px black ;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.menus{
+ flex: 1 1 content;
+}
+
+.menuSobre{
+    margin: 50px;
+    align-items: center;
+    
+}
+
+.button{
+  margin: 10px;
+  box-shadow: 10px 10px 20px black;
+  border: 2px solid purple;
+  padding: 10px 70px;
+  border-radius: 30px;
+  background-color: #310153;
+  font-size: 20px;
+  font-family:fantasy;
+  color: aliceblue; 
+  cursor: pointer; 
+}
+
