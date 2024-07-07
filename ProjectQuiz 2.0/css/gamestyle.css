@@ -1,0 +1,23 @@
+@keyframes gradientAnimation {  
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .bodygame{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
