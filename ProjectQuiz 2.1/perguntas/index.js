@@ -209,77 +209,44 @@ const questoes = [
         },
         resposta: 'b'
     },
+    {
+        enunciado: 'A PIRÂMIDE DE MASLOW É ESCRITA EM QUAL ORDEM DE NECESSIDADES? DA MAIOR NECESSIDADE PARA A MENOR. ',
+        alternativas: {
+            a: 'Auto-realização, Sociais, Estima, Fisiologicas e Segurança',
+            b: 'Estima, Fisiologicas, Auto-realização, Segurança e Sociais.',
+            c: 'Fisiologicas, Segurança, Sociais, Estima e Auto-realização.',
+            d: 'Auto-realização, Sociais, Segurança, Estima e Fisiologicas'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: '23.	O BALANÇO PATRIMONIAL SE DIVIDE EM QUANTAS CONTAS?',
+        alternativas: {
+            a: '1',
+            b: '2',
+            c: '3',
+            d: '4'
+        },
+        resposta: 'c'
+    },
+     {
+        enunciado: 'A EMPRESA XIRIRICA L.T.D.A COMPROU UM TERRENO NO VALOR DE R$ 100.000,00. ESTE TERRENO NO BALANÇO PATRINONIAL ELE SE TORNA UM:',
+        alternativas: {
+            a: 'PCLD (Provisão para Crédito de Liquidação duvidosa) ',
+            b: 'Passivo Não-circulante',
+            c: 'Ativo Não Circulante',
+            d: 'Patrimônio líquido'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: '25.	QUAL É O MODAL MAIS UTILIZADO NO BRASIL? ',
+        alternativas: {
+            a: 'Modal Ferroviário',
+            b: 'Modal Rodoviário',
+            c: 'Modal aéreo',
+            d: 'Modal Dutoviário'
+        },
+        resposta: 'b'
+    },
 ]
-
-
-
-
-1 	QUEM FOI O FILÓSOFO AUTOR DA FRASE SÓ SEI QUE NADA SEI?
-
-2.	QUAL A MOEDA USADA NO PARAGUAI?
-
-3.	QUAL O JOGADOR QUE MARCOU UM GOL DE MÃO NA FINAL DE UMA COPA DO MUNDO?
-
-4.  QUAL O PAÍS DE ORIGEM DA EMPRESA DE ELETRÔNICOS NOKIA?
-
-5.	QUAL FOI O MAIOR IMPÉRIO EM NÍVEL TERRITORIAL NA HISTÓRIA DO MUNDO?
-
-6.	QUAL É A CAPITAL DO CANADÁ?
-
-7.	QUAL A DATA QUE FOI LANÇADO O FACEBOOK?
-
-8.	QUAL A UNIDADE DE MEDIDA DA FÍSICA É O PADRÃO PARA PESOS?
-
-9.	O QUE PRODUZ UM REATOR DE BIOMASSA?
-
-10.	QUAL O ANIMAL NACIONAL DA ESCÓCIA?
-
-11.	QUEM DESCOBRIU O BRASIL?
-
-12.	EM QUE ANO O PRIMEIRO SATÉLITE FOI LANÇADO? 
-
-13.	QUEM COSTRUIU A ARCA?
-
-14.	O TOMATE É UMA? 
-
-15.	COM QUANTOS GRAUS A AGUA FERVE? 
-
-16.	QUAL PAÍS SEDIOU A COPA DE 2018? 
-
-17.	QUAL É O TRIÂNGULO QUE TEM TODOS OS LADOS DIFERENTES?
-
-18.	QUAL O COLETIVO DE CÃES? 
-
-19.	EM QUE PAÍS NASCEU CARMEM MIRANDA? 
-
-20.	QUAL MONTANHA SE LOCALIZA ENTRE A FRONTEIRA DO TIBET COM O NEPAL? 
-
-21.	QUEM É CRIOU A ADMINISTRAÇÃO CIENTÍFICA? 
-
-22.	A PIRÂMIDE DE MASLOW É ESCRITA EM QUAL ORDEM DE NECESSIDADES? DA MAIOR NECESSIDADE PARA A MENOR. 
-
-23.	O BALANÇO PATRIMONIAL SE DIVIDE EM QUANTAS CONTAS? 
-
-24.	A EMPRESA XIRIRICA L.T.D.A COMPROU UM TERRENO NO VALOR DE R$ 100.000,00. ESTE TERRENO NO BALANÇO PATRINONIAL ELE SE TORNA UM:
-
-25.	QUAL É O MODAL MAIS UTILIZADO NO BRASIL? 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
