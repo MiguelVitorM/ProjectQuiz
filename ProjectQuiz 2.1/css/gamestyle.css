@@ -32,7 +32,7 @@ html body{
   src: url(../font/GODOFWAR.TTF);
 }
 
-.conteiner .alt_size h1{
+.conteiner .alt_size h4{
   font-size: 20px;
   color: antiquewhite;
   width: 80%;
@@ -95,8 +95,4 @@ html body{
 .gameback:hover {
   transform: translateY(-3px);
   background-color: #b006b0;
-}
-.linha{
-  color: black;
-  border: 4px solid black;
 }
