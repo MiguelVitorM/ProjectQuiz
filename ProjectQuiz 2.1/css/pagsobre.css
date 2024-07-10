@@ -56,6 +56,10 @@ html {
           color: aliceblue;  
           cursor: pointer;
         }
+        .back:hover{
+          transform: translateY(-3px);
+          background-color:  #b006b0;
+        }
 
         .header {
             position: relative;

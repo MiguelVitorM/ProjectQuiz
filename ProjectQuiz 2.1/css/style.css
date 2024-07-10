@@ -38,6 +38,11 @@ html {
     src: url(../font/Lemon\ Shake\ Shake.ttf);
 }
 
+@font-face {
+  font-family: GodOfWar;
+  src: url(../font/GODOFWAR.TTF);
+}
+
 .container{
     border-radius: 10%;
     margin: 0;
@@ -51,15 +56,17 @@ html {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 20px;
 }
 
 .nameQuiz{
-    font-family: MinhaFonte;
+    font-family: GodOfWar;
     font-size: 40px;
     text-shadow: 10px 5px 20px black ;
     color: white;
     text-align: center;
     align-items: center;
+
 }
 .menus{
  flex: 1 1 content;
@@ -84,3 +91,7 @@ html {
   cursor: pointer; 
 }
 
+.button:hover{
+  transform: translateY(-3px);
+  background-color:  #b006b0;
+}

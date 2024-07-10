@@ -1,0 +1,1 @@
+const resposta = "Manutenção corretiva essencial para manter o funcionamento dos equipamentos."(true
