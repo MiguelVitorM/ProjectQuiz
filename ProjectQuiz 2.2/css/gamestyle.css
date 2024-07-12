@@ -1,7 +1,7 @@
 html body{
   margin: 0;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
 }
 @keyframes gradientAnimation {  
     0% {
@@ -15,9 +15,11 @@ html body{
     }
   }
 
-.bodygame{
+.bodygame {
+
     margin: 0;
-    height: 100vh;
+    
+    height: 100%;
     background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
     );
     background-size: 300% 300%;
@@ -25,8 +27,8 @@ html body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-} 
+
+}
 @font-face {
   font-family: GodOfWar;
   src: url(../font/GODOFWAR.TTF);
@@ -43,14 +45,14 @@ html body{
   top: -70px;
   font-family: GodOfWar;
   text-shadow: 10px 5px 5px  rgb(0, 0, 0);
-  background-color: #01a20c;
+  
 }
 
 .conteiner{
   
   box-shadow: 10px 10px 20px;
   width: 1080px;
-  height: 720px;
+  height: 80%;
   border-radius: 20px;
   margin: 10px;
   background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
@@ -78,7 +80,7 @@ html body{
   cursor: pointer; 
 }
 
-.gamebutton{
+#gamebutton{
   margin: 10px;
   box-shadow: 10px 10px 20px black;
   border: 2px solid purple;
@@ -88,17 +90,30 @@ html body{
   font-size: 20px;
   font-family:fantasy;
   color: aliceblue; 
-  cursor: pointer; 
   align-items: center;
   justify-content: center;
 }
 
-.gamebutton:hover,
+
 .gameback:hover {
   transform: translateY(-3px);
   background-color: #b006b0;
 }
-.answers{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.alternativa:hover{
+  background-color: #b006b0;
+}
+
+.alternativa{
+  cursor: pointer;
+}
+
+.butaodevoltar{
+  height: 100%;
+}
+
+.correta{
+  color: green;
+}
+.incorreta{
+  color: red;
 }

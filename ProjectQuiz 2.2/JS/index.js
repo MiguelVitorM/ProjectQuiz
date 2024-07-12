@@ -251,7 +251,7 @@ const questoes = [
     },
 ]
 
-const alternativas = document.getElementsByClassName('gamebutton')
+
 const displayQuestionDiv = document.getElementById('display-question')
 const indice = Math.floor(Math.random() * questoes.length)
 const questao = questoes[indice]
@@ -265,13 +265,39 @@ function proximaQuestao (){
     enunciado.className = ''
     
     displayQuestionDiv.appendChild(enunciado)
+
+    const alternativasLista = document.createElement('ol')
+   alternativasLista.id = "gamebutton"
+    displayQuestionDiv.appendChild(alternativasLista)
+ 
+    for(const alternativa in questao.alternativas ){
+        const item = document.createElement('li')
+        item.innerText = questao.alternativas[alternativa]
+        item.className = "alternativa"
+        item.setAttribute('type','A')
+        item.setAttribute('data-key',alternativa)
+        item.addEventListener('click', () =>verificarResposta(item, alternativa))
+        alternativasLista.appendChild(item)
+    }
+
 }
 
-function alternativasQuest(){
-    questoes[indice].alternativas.forEach(element => {
-        const alter = document.createElement("button")
-        alter.classList.add('gamebutton')
-        alter.textContent = element.alternativas
-        alternativas.appendChild(alter)
-      });
+function verificarResposta(item, alternativa) {
+    const respostaCorreta = questao.resposta.toLowerCase()
+
+    if (alternativa === respostaCorreta) {
+        item.classList.add('correta')
+    } else {
+        item.classList.add('incorreta')
+    }
+
+    const alternativas = document.querySelectorAll('.alternativa')
+    alternativas.forEach(alt => {
+        alt.removeEventListener('click', verificarResposta)
+        if (alt.getAttribute('data-key') !== respostaCorreta) {
+            alt.classList.add('incorreta')
+        } else {
+            alt.classList.add('correta')
+        }
+    })
 }
