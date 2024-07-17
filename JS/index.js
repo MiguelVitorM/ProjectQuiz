@@ -1,3 +1,5 @@
+temporizador(30);
+
 const questoes = [
     {
         enunciado: 'QUEM FOI O FILÓSOFO AUTOR DA FRASE SÓ SEI QUE NADA SEI?',
@@ -300,4 +302,21 @@ function verificarResposta(item, alternativa) {
             alt.classList.add('correta')
         }
     })
+}
+
+function temporizador(count){
+    if( count < 0) {
+        return
+    }
+
+    const contador = document.getElementById('contador')
+    contador.innerHTML = 'Tempo restante: ' + count + ' segundo(s)'
+
+    setTimeout(() => {
+        console.log(count);
+
+        count--;
+
+        temporizador(count);
+    }, 1000);
 }
