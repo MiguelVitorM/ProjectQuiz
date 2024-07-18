@@ -1,5 +1,3 @@
-temporizador(30);
-
 const questoes = [
     {
         enunciado: 'QUEM FOI O FILÓSOFO AUTOR DA FRASE SÓ SEI QUE NADA SEI?',
@@ -252,71 +250,122 @@ const questoes = [
         resposta: 'b'
     },
 ]
+let questaoAtual = 0;
+const limiteQuestoes = 10;
+const tempoInicial = 3;
+let tempo = tempoInicial;
+let questaoRespondida = false;
 
+const displayQuestionDiv = document.getElementById('display-question');
+const contadorDiv = document.getElementById('contador');
 
-const displayQuestionDiv = document.getElementById('display-question')
-const indice = Math.floor(Math.random() * questoes.length)
-const questao = questoes[indice]
-
-proximaQuestao()
-
-function proximaQuestao (){
-    const enunciado = document.createElement('h4')
-    
-    enunciado.innerHTML = questao.enunciado
-    enunciado.className = ''
-    
-    displayQuestionDiv.appendChild(enunciado)
-
-    const alternativasLista = document.createElement('ol')
-    alternativasLista.id = "gamebutton"
-    displayQuestionDiv.appendChild(alternativasLista)
- 
-    for(const alternativa in questao.alternativas ){
-        const item = document.createElement('li')
-        item.innerText = questao.alternativas[alternativa]
-        item.className = "alternativa"
-        item.setAttribute('type','A')
-        item.setAttribute('data-key',alternativa)
-        alternativasLista.appendChild(item)
-        item.addEventListener('click', () => verificarResposta(item, alternativa))
-    }
-
+function iniciarQuiz() {
+    questaoAtual = 0;
+    displayQuestionDiv.innerHTML = "";
+    contadorDiv.innerHTML = "";
+    proximaQuestao();
 }
 
-function verificarResposta(item, alternativa) {
-    const respostaCorreta = questao.resposta.toLowerCase()
+function proximaQuestao() {
+    if (questaoAtual >= limiteQuestoes) {
+        displayQuestionDiv.innerHTML = "<h4>Quiz Concluído!</h4>";
+        return;
+    }
+
+    questaoRespondida = false;
+    displayQuestionDiv.innerHTML = "";
+
+    const questao = questoes[Math.floor(Math.random() * questoes.length)];
+    const enunciado = document.createElement('h4');
+    enunciado.innerHTML = questao.enunciado;
+    displayQuestionDiv.appendChild(enunciado);
+
+    const alternativasLista = document.createElement('ol');
+    alternativasLista.id = "gamebutton";
+    displayQuestionDiv.appendChild(alternativasLista);
+
+    for (const alternativa in questao.alternativas) {
+        const item = document.createElement('li');
+        item.innerText = questao.alternativas[alternativa];
+        item.className = "alternativa";
+        item.setAttribute('type', 'A');
+        item.setAttribute('data-key', alternativa);
+        alternativasLista.appendChild(item);
+        item.addEventListener('click', () => verificarResposta(item, alternativa, questao));
+    }
+
+    questaoAtual++;
+    temporizador(tempoInicial);
+}
+
+function verificarResposta(item, alternativa, questao) {
+    if (questaoRespondida) return;
+    questaoRespondida = true;
+
+    const respostaCorreta = questao.resposta.toLowerCase();
 
     if (alternativa === respostaCorreta) {
-        item.classList.add('correta')
+        item.classList.add('correta');
     } else {
-        item.classList.add('incorreta')
+        item.classList.add('incorreta');
     }
 
-    const alternativas = document.querySelectorAll('.alternativa')
+    const alternativas = document.querySelectorAll('.alternativa');
     alternativas.forEach(alt => {
-        alt.removeEventListener('click', verificarResposta)
+        alt.removeEventListener('click', () => verificarResposta(item, alternativa, questao));
         if (alt.getAttribute('data-key') !== respostaCorreta) {
-            alt.classList.add('incorreta')
+            alt.classList.add('incorreta');
         } else {
-            alt.classList.add('correta')
+            alt.classList.add('correta');
         }
-    })
+    });
+
+    if (!document.getElementById('botaoProxima')) {
+        exibirBotaoProxima();
+    }
 }
 
-function temporizador(count){
-    if( count < 0) {
-        return
+function exibirBotaoProxima() {
+    const botaoProxima = document.createElement('button');
+    botaoProxima.className ="buttonNext"
+    botaoProxima.innerText = "Próxima";
+    botaoProxima.id = 'botaoProxima';
+    botaoProxima.addEventListener('click', () => {
+        botaoProxima.remove();
+        proximaQuestao();
+    });
+
+    displayQuestionDiv.appendChild(botaoProxima);
+}
+
+function exibirGameOver() {
+    displayQuestionDiv.innerHTML = "<h4>Game Over!</h4>";
+    const botaoInicio = document.createElement('button');
+    botaoInicio.className ="buttonNext"
+    botaoInicio.innerText = "Voltar ao Início";
+    botaoInicio.addEventListener('click', iniciarQuiz);
+    displayQuestionDiv.appendChild(botaoInicio);
+}
+
+function temporizador(count) {
+    if (questaoRespondida) return;
+
+    if (count < 0) {
+        if (!questaoRespondida) {
+            exibirGameOver();
+        }
+        return;
     }
 
-    const contador = document.getElementById('contador')
-    contador.innerHTML = 'Tempo restante: ' + count + ' segundo(s)'
+    contadorDiv.innerHTML = 'Tempo restante: ' + count + ' segundo(s)';
 
     setTimeout(() => {
-        console.log(count);
-
-        count--;
-
-        temporizador(count);
+        if (!questaoRespondida) {
+            count--;
+            temporizador(count);
+        }
     }, 1000);
 }
+
+// Inicializa o quiz
+iniciarQuiz();
