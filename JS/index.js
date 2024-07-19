@@ -157,7 +157,7 @@ const questoes = [
             c: 'Qtar',
             d: 'Cataquistão'
         },
-        resposta: 'a'
+        resposta: 'b'
     },
     {
         enunciado: 'QUAL É O TRIÂNGULO QUE TEM TODOS OS LADOS DIFERENTES? ',
@@ -252,30 +252,44 @@ const questoes = [
 ]
 let questaoAtual = 0;
 const limiteQuestoes = 10;
-const tempoInicial = 3;
+const tempoInicial = 6;
 let tempo = tempoInicial;
 let questaoRespondida = false;
+let totalCorreto = 0
+let questaoRestante = [...questoes]
 
 const displayQuestionDiv = document.getElementById('display-question');
 const contadorDiv = document.getElementById('contador');
 
 function iniciarQuiz() {
     questaoAtual = 0;
+    questaoRestante = [...questoes]
+    totalCorreto = 0
     displayQuestionDiv.innerHTML = "";
     contadorDiv.innerHTML = "";
     proximaQuestao();
 }
 
 function proximaQuestao() {
-    if (questaoAtual >= limiteQuestoes) {
-        displayQuestionDiv.innerHTML = "<h4>Quiz Concluído!</h4>";
+    if (questaoAtual >= limiteQuestoes || questaoRestante.length === 0) {
+       
+        displayQuestionDiv.innerHTML = `<h4>Quiz Concluído! <br> Acertos ${totalCorreto}/10  </h4>`; 
+        contadorDiv.innerHTML = ""  
+    const botaoInicio = document.createElement('button');
+     botaoInicio.className ="buttonNext"
+     botaoInicio.innerText = "Jogar Novamente?";
+     botaoInicio.addEventListener('click', iniciarQuiz);
+    displayQuestionDiv.appendChild(botaoInicio);
         return;
     }
 
     questaoRespondida = false;
     displayQuestionDiv.innerHTML = "";
 
-    const questao = questoes[Math.floor(Math.random() * questoes.length)];
+    const indiceAleatorio = Math.floor(Math.random() * questaoRestante.length) 
+    const questao = questaoRestante[indiceAleatorio]
+    questaoRestante.splice(indiceAleatorio,1)
+
     const enunciado = document.createElement('h4');
     enunciado.innerHTML = questao.enunciado;
     displayQuestionDiv.appendChild(enunciado);
@@ -306,6 +320,7 @@ function verificarResposta(item, alternativa, questao) {
 
     if (alternativa === respostaCorreta) {
         item.classList.add('correta');
+        totalCorreto++
     } else {
         item.classList.add('incorreta');
     }
@@ -339,10 +354,10 @@ function exibirBotaoProxima() {
 }
 
 function exibirGameOver() {
-    displayQuestionDiv.innerHTML = "<h4>Game Over!</h4>";
+    displayQuestionDiv.innerHTML = "<h4>Game Over! <br> Tempo Excedido </h4>";
     const botaoInicio = document.createElement('button');
     botaoInicio.className ="buttonNext"
-    botaoInicio.innerText = "Voltar ao Início";
+    botaoInicio.innerText = "Jogar Novamente?";
     botaoInicio.addEventListener('click', iniciarQuiz);
     displayQuestionDiv.appendChild(botaoInicio);
 }
