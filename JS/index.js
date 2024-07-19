@@ -252,7 +252,7 @@ const questoes = [
 ]
 let questaoAtual = 0;
 const limiteQuestoes = 10;
-const tempoInicial = 6;
+const tempoInicial = 10;
 let tempo = tempoInicial;
 let questaoRespondida = false;
 let totalCorreto = 0
