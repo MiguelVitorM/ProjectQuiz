@@ -35,7 +35,7 @@ html body{
 h4{
   font-size: 40px;
   color: antiquewhite;
-  width: 80%;
+  width: 100%;
   display: flex;
   position: relative;
   text-align: center;
@@ -75,10 +75,10 @@ h4{
   margin: 10px;
   box-shadow: 10px 10px 20px black;
   border: 2px solid purple;
-  padding: 8px 60px;
+  padding: 10px 70px;
   border-radius: 30px;
   background-color: #310153;
-  font-size: 16px;
+  font-size: 20px;
   font-family:fantasy;
   color: aliceblue; 
   cursor: pointer; 
@@ -112,10 +112,10 @@ h4{
   margin-left: auto;
 }
 
-.buttonNext:hover
-.gameback:hover {
+.buttonNext:hover, .gameback:hover{
   transform: translateY(-3px);
-  background-color: #b006b0;
+  background-color:  #b006b0;
+
 }
 .alternativa:hover{
   background-color: #b006b0;
@@ -138,7 +138,16 @@ h4{
 }
 
 #contador {
-  color: white;
+font-size: 20px;
+margin: 10px;
+box-shadow: 10px 10px 20px black;
+border: 2px solid purple;
+padding: 10px 70px;
+border-radius: 20px;
+background-color: #310153;
+font-family:fantasy;
+color: rgb(255, 240, 240); 
+
 }
 
 #contagemQuest{
