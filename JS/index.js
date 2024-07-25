@@ -249,15 +249,259 @@ const questoes = [
         },
         resposta: 'b'
     },
+    {
+        enunciado: 'QUANDO FOI O ANO DO TRETA CAMPEÃO DO BRASIL? ',
+        alternativas: {
+            a: '1994',
+            b: '1998',
+            c: '1970',
+            d: '2002'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUANDO ACONTECEU O ATENTADO DAS TORRES GEMEAS EM NOVA YORK? ',
+        alternativas: {
+            a: '10 de Setembro de 2000',
+            b: '11 de Setembro de 2011',
+            c: '10 de Setembro de 2003',
+            d: '11 de Setembro de 2001'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL É O RESULTADO DA EXPRESSÃO NUMÉRICA: 2 + 3 + 2 x 5 + 1 =, (DE ACORDO COM A REGRA MATEMÁTICA)? ',
+        alternativas: {
+            a: '36',
+            b: '20',
+            c: '16',
+            d: '35'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: 'QUAL É O MAIOR OSSO DO CORPO HUMANO? ',
+        alternativas: {
+            a: 'Rádio',
+            b: 'Costela',
+            c: 'Fíbula',
+            d: 'Fêmur'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL FOI O ANO QUE O TITANIC FOI AFUNDADO? ',
+        alternativas: {
+            a: '1912',
+            b: '1913',
+            c: '1014',
+            d: '1915'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUAL FOI O PRIMEIRO PRESIDENTE DO BRASIL? ',
+        alternativas: {
+            a: 'Getulio Vargas',
+            b: 'João Goulart',
+            c: 'Deodoro da Fonseca',
+            d: 'Floriano Peixoto'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: 'EM QUE ANO COMEÇOU A GUERRA FRIA? ',
+        alternativas: {
+            a: '1945',
+            b: '1946',
+            c: '1947',
+            d: '1948'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'QUAL É A PARTE DO ORGÃO RESPONSÁVEL PELO OLFATO? ',
+        alternativas: {
+            a: 'Nariz',
+            b: 'Olho',
+            c: 'Língua',
+            d: 'Dedos'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUAL É O ANO QUE SURGIU O PONTO CIDADÃO? ',
+        alternativas: {
+            a: '2001',
+            b: '2002',
+            c: '2003',
+            d: '2004'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL É A CIDADE CONSIDERADA A VENEZA DO BRASIL? ',
+        alternativas: {
+            a: 'Gramado',
+            b: 'São Paulo',
+            c: 'Rio de Janeiro',
+            d: 'Recife'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL FOI O ANO QUE ACONTECEU A REVOLUÇÃO PERNAMBUCANA? ',
+        alternativas: {
+            a: '1817',
+            b: '1822',
+            c: '1827',
+            d: '1835'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUAL É O NOME DO CANTOR QUE É CONSIDERADO O REI DO BREGA? ',
+        alternativas: {
+            a: 'Roberto Carlos',
+            b: 'Alceu Valença',
+            c: 'Geraldo Azevedo',
+            d: 'Reginaldo Rossi'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL É O RESULTADO DA RAIZ QUADRADA DE 121? ',
+        alternativas: {
+            a: '10',
+            b: '11',
+            c: '12',
+            d: '13'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'QUAL É O MAIOR BIOMA BRASILEIRO? ',
+        alternativas: {
+            a: 'Floresta Amozônica',
+            b: 'Cerrado',
+            c: 'Mata Atlantica',
+            d: 'Caatinga'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUAL É O ANO QUE IGARASSU-PE FOI TORNADO MUNICÍPIO AUTÔNOMO? ',
+        alternativas: {
+            a: '1892',
+            b: '1893',
+            c: '1894',
+            d: '1895'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'QUAL É O RESULTADO DE: 2² + 2³ = ? ',
+        alternativas: {
+            a: '4',
+            b: '6',
+            c: '12',
+            d: '16'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: 'QUAIS AS MODALIDADES QUE É CONSIDERADO RELAÇÃO DE EMPREGO? ',
+        alternativas: {
+            a: 'Onerosidade, impessoalidade, obrigação, Pessoal Jurídica, Alteridade',
+            b: 'Onerosidade,Pessoalidade, Subordinação,Não-Eventualide',
+            c: 'Salário, Onerosidade, Subordinação, Eventualidade',
+            d: 'Impessoalidade, Não-Subordinação, Não-eventualidade, Onerosidade'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'DAS PALAVRAS ABAIXO QUAL É UMA LINGUAGEM DE PROGRAMAÇÃO? ',
+        alternativas: {
+            a: 'SiseScript',
+            b: 'JavaScript',
+            c: 'CiterScript',
+            d: 'TatyScript'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'QUANDO FOI LANÇADO O PRIMEIRO FILME DA FRANQUIA VINGADORES? ',
+        alternativas: {
+            a: '2010',
+            b: '2011',
+            c: '2012',
+            d: '2014'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: 'QUEM FOI O PRIMEIRO HOMEM A IR A LUA? ',
+        alternativas: {
+            a: 'Michael Collins',
+            b: 'Neil Armstrong',
+            c: 'Pete Conrad',
+            d: 'Alan Bean'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'QUAL É A REDE SOCIAL MAIS USADA NO MUNDO EM  2023? ',
+        alternativas: {
+            a: 'Facebook',
+            b: 'Youtube',
+            c: 'Instagram',
+            d: 'WhatsApp'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUANTOS PAÍSES EXISTEM ATUALMENTE NO CONTINENTE AFRICANO? ',
+        alternativas: {
+            a: '50',
+            b: '51',
+            c: '53',
+            d: '54'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUEM É O PRESIDENTE DO MÉXICO EM 2024? ',
+        alternativas: {
+            a: 'Andrés Manuel López Obrador',
+            b: 'Joseph Robinette',
+            c: 'Vladimir Vladimirovitch Putin',
+            d: 'LULA'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'Qual a soma de todos os números de um dado? ',
+        alternativas: {
+            a: '20',
+            b: '21',
+            c: '22',
+            d: '23'
+        },
+        resposta: 'b'
+    },
+
 ]
 let questaoAtual = 0;
 const limiteQuestoes = 10;
 const tempoInicial = 10;
-let tempo = tempoInicial;
+let tempoID;
 let questaoRespondida = false;
 let totalCorreto = 0;
 let questaoRestante = [...questoes];
-let points = 0;
+let score = 100;
+let tempoTotalGasto = 0; // Variável para armazenar o tempo total gasto em respostas corretas
+let tempoInicio; // Variável para armazenar o tempo de início de cada pergunta
+
 
 const displayQuestionDiv = document.getElementById('display-question');
 const contadorDiv = document.getElementById('contador');
@@ -267,6 +511,7 @@ function iniciarQuiz() {
     questaoAtual = 0;
     questaoRestante = [...questoes];
     totalCorreto = 0;
+    tempoTotalGasto = 0; // Reinicia o tempo total gasto
     displayQuestionDiv.innerHTML = "";
     contadorDiv.innerHTML = "";
     proximaQuestao();
@@ -274,13 +519,15 @@ function iniciarQuiz() {
 
 function proximaQuestao() {
     if (questaoAtual >= limiteQuestoes || questaoRestante.length === 0) {
-        displayQuestionDiv.innerHTML = `<h4>Quiz Concluído! <br> Acertos ${totalCorreto}/10</h4>`;
+        displayQuestionDiv.innerHTML = `<h4>Quiz Concluído! <br> Acertos ${totalCorreto}/10 <br> Tempo total gasto: ${tempoTotalGasto} segundo(s)</h4>`;
         contadorDiv.innerHTML = "";
         const botaoInicio = document.createElement('button');
         botaoInicio.className = "buttonNext";
         botaoInicio.innerText = "Jogar Novamente?";
         botaoInicio.addEventListener('click', iniciarQuiz);
         displayQuestionDiv.appendChild(botaoInicio);
+        contadorDiv.remove(contadorDiv)
+
         return;
     }
 
@@ -310,6 +557,7 @@ function proximaQuestao() {
     }
 
     questaoAtual++;
+    tempoInicio = new Date(); // Registra o tempo de início da pergunta
     temporizador(tempoInicial);
 
     let con = document.createElement('p');
@@ -322,9 +570,15 @@ function verificarResposta(event, alternativa, questao) {
     if (questaoRespondida) return;
     questaoRespondida = true;
 
+    clearTimeout(tempoID); // Para o temporizador
+
     const item = event.target;
     const respostaCorreta = questao.resposta.toLowerCase();
 
+    const tempoFim = new Date();
+    const tempoGasto = Math.floor((tempoFim - tempoInicio) / 1000); // Calcula o tempo gasto em segundos
+    
+    tempoTotalGasto += tempoGasto; // Soma o tempo gasto se a resposta for correta
     if (alternativa === respostaCorreta) {
         item.classList.add('correta');
         totalCorreto++;
@@ -361,7 +615,9 @@ function exibirBotaoProxima() {
 }
 
 function temporizador(count) {
-    if (questaoRespondida) return;
+    if (questaoRespondida) {
+        return;
+    }
 
     if (count < 0) {
         if (!questaoRespondida) {
@@ -372,10 +628,9 @@ function temporizador(count) {
 
     contadorDiv.innerHTML = 'Tempo restante: ' + count + ' segundo(s)';
 
-    setTimeout(() => {
+    tempoID = setTimeout(() => {
         if (!questaoRespondida) {
-            count--;
-            temporizador(count);
+            temporizador(count - 1);
         }
     }, 1000);
 }
