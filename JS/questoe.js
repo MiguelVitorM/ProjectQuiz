@@ -452,13 +452,44 @@ const questoes = [
         resposta: 'b'
     },
     {
-        enunciado: 'QUEM FOI O PRIMEIRO HOMEM A IR A LUA? ',
+        enunciado: 'QUAL É A REDE SOCIAL MAIS USADA NO MUNDO EM  2023? ',
         alternativas: {
-            a: 'Michael Collins',
-            b: 'Neil Armstrong',
-            c: 'Pete Conrad',
-            d: 'Alan Bean'
+            a: 'Facebook',
+            b: 'Youtube',
+            c: 'Instagram',
+            d: 'WhatsApp'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUANTOS PAÍSES EXISTEM ATUALMENTE NO CONTINENTE AFRICANO? ',
+        alternativas: {
+            a: '50',
+            b: '51',
+            c: '53',
+            d: '54'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUEM É O PRESIDENTE DO MÉXICO EM 2024? ',
+        alternativas: {
+            a: 'Andrés Manuel López Obrador',
+            b: 'Joseph Robinette',
+            c: 'Vladimir Vladimirovitch Putin',
+            d: 'LULA'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'Qual a soma de todos os números de um dado? ',
+        alternativas: {
+            a: '20',
+            b: '21',
+            c: '22',
+            d: '23'
         },
         resposta: 'b'
     },
+
 ]
