@@ -109,7 +109,8 @@ h4{
   font-family:fantasy;
   color: aliceblue;
   cursor: pointer;
-  margin-left: auto;
+  margin: 20px;
+  
 }
 
 .buttonNext:hover, .gameback:hover{

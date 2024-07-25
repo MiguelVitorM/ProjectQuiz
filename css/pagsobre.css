@@ -13,7 +13,7 @@ html {
     100% {
       background-position: 0% 50%;
     }
-  }
+}
 
   .body{
     margin: 0;
@@ -23,19 +23,18 @@ html {
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
    
-  } 
-        body {
-            font-family: "Outfit", sans-serif;
-            
-        }
+} 
+body {
+  font-family: "Outfit", sans-serif;
+}
 
-        .imgs img {
-            height: 140px;
-            width: 140px;
-            border-radius: 100%;
-            margin-right: 15px;
-            margin: 10px;
-        }
+.imgs img {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  margin-right: 15px;
+  margin: 10px;
+}
 
         .container {
             display: flex;

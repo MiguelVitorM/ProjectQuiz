@@ -492,7 +492,7 @@ const questoes = [
 
 ]
 let questaoAtual = 0;
-const limiteQuestoes = 10;
+const limiteQuestoes = 1;
 const tempoInicial = 10;
 let tempoID;
 let questaoRespondida = false;
@@ -519,15 +519,23 @@ function iniciarQuiz() {
 
 function proximaQuestao() {
     if (questaoAtual >= limiteQuestoes || questaoRestante.length === 0) {
+        
         displayQuestionDiv.innerHTML = `<h4>Quiz Concluído! <br> Acertos ${totalCorreto}/10 <br> Tempo total gasto: ${tempoTotalGasto} segundo(s)</h4>`;
         contadorDiv.innerHTML = "";
+       
         const botaoInicio = document.createElement('button');
         botaoInicio.className = "buttonNext";
         botaoInicio.innerText = "Jogar Novamente?";
         botaoInicio.addEventListener('click', iniciarQuiz);
         displayQuestionDiv.appendChild(botaoInicio);
+       
         contadorDiv.remove(contadorDiv)
-
+       
+        const botaoPontuacao = document.createElement('button');
+        botaoPontuacao.className = "buttonNext";
+        botaoPontuacao.innerText = "Salvar Pontuação?";
+        displayQuestionDiv.appendChild(botaoPontuacao)
+        botaoPontuacao.addEventListener('click', )
         return;
     }
 
