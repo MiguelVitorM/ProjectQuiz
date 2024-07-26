@@ -492,7 +492,7 @@ const questoes = [
 
 ]
 let questaoAtual = 0;
-const limiteQuestoes = 1;
+const limiteQuestoes = 10;
 const tempoInicial = 10;
 let tempoID;
 let questaoRespondida = false;
@@ -506,6 +506,9 @@ let tempoInicio; // Variável para armazenar o tempo de início de cada pergunta
 const displayQuestionDiv = document.getElementById('display-question');
 const contadorDiv = document.getElementById('contador');
 const contagemQuestao = document.getElementById('contagemQuestao');
+const loginModal = document.getElementById('loginModal')
+const closeModal = document.getElementById('closeModal')
+const loginForm = document.getElementById('loginForm')
 
 function iniciarQuiz() {
     questaoAtual = 0;
@@ -528,16 +531,17 @@ function proximaQuestao() {
         botaoInicio.innerText = "Jogar Novamente?";
         botaoInicio.addEventListener('click', iniciarQuiz);
         displayQuestionDiv.appendChild(botaoInicio);
-       
+        
         contadorDiv.remove(contadorDiv)
        
         const botaoPontuacao = document.createElement('button');
         botaoPontuacao.className = "buttonNext";
         botaoPontuacao.innerText = "Salvar Pontuação?";
+        botaoPontuacao.addEventListener('click', abrirModal);
         displayQuestionDiv.appendChild(botaoPontuacao)
-        botaoPontuacao.addEventListener('click', )
         return;
     }
+
 
     questaoRespondida = false;
     displayQuestionDiv.innerHTML = "";
@@ -642,6 +646,62 @@ function temporizador(count) {
         }
     }, 1000);
 }
+
+
+// Função para abrir o modal
+function abrirModal() {
+    loginModal.style.display = 'flex';
+}
+
+// Função para fechar o modal
+function fecharModal() {
+    loginModal.style.display = 'none';
+}
+
+// Evento para fechar o modal ao clicar no 'x'
+closeModal.addEventListener('click', fecharModal);
+
+// Evento para fechar o modal ao clicar fora do conteúdo do modal
+window.addEventListener('click', (event) => {
+    if (event.target === loginModal) {
+        fecharModal();
+    }
+});
+
+// Evento para o envio do formulário de login/registro
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let points = (totalCorreto + tempoTotalGasto) / 2 
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+   const user = {
+    username,
+    score:  points,
+    password: CryptoJS.SHA256(password).toString()
+   }
+
+    // Armazena os dados de login no localStorage
+    let users = JSON.parse(localStorage.getItem('users'))
+
+      if (!users) {
+        localStorage.setItem('users', JSON.stringify([]))
+        users = []
+      }
+
+      users.push(user)
+
+        localStorage.setItem('users', JSON.stringify(users))
+    
+
+   
+    alert(`Bem-vindo, ${username}!`);
+    fecharModal();
+});
+
+
+
+
+
 
 // Inicializa o quiz
 iniciarQuiz();
