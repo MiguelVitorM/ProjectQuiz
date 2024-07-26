@@ -140,7 +140,7 @@ const questoes = [
         resposta: 'd'
     },
     {
-        enunciado: 'COM QUANTOS GRAUS A AGUA FERVE? ',
+        enunciado: 'QUAL É A TEMPERATURA QUE  A ÁGUA FERVE? ',
         alternativas: {
             a: '208,4°F',
             b: '50°F',
@@ -154,7 +154,7 @@ const questoes = [
         alternativas: {
             a: 'Turquia',
             b: 'Russia',
-            c: 'Qtar',
+            c: 'Catar',
             d: 'Cataquistão'
         },
         resposta: 'b'
@@ -260,7 +260,7 @@ const questoes = [
         resposta: 'a'
     },
     {
-        enunciado: 'QUANDO ACONTECEU O ATENTADO DAS TORRES GEMEAS EM NOVA YORK? ',
+        enunciado: 'QUANDO ACONTECEU O ATENTADO DAS TORRES GÊMEAS EM NOVA YORK? ',
         alternativas: {
             a: '10 de Setembro de 2000',
             b: '11 de Setembro de 2011',
@@ -320,7 +320,7 @@ const questoes = [
         resposta: 'b'
     },
     {
-        enunciado: 'QUAL É A PARTE DO ORGÃO RESPONSÁVEL PELO OLFATO? ',
+        enunciado: 'QUAL É A PARTE DO CORPO HUMANO É RESPONSÁVEL PELO OLFATO? ',
         alternativas: {
             a: 'Nariz',
             b: 'Olho',
@@ -340,7 +340,7 @@ const questoes = [
         resposta: 'd'
     },
     {
-        enunciado: 'QUAL É A CIDADE CONSIDERADA A VENEZA DO BRASIL? ',
+        enunciado: 'QUAL É A CIDADE CONSIDERADA A VENEZA BRASILEIRA? ',
         alternativas: {
             a: 'Gramado',
             b: 'São Paulo',
@@ -382,7 +382,7 @@ const questoes = [
     {
         enunciado: 'QUAL É O MAIOR BIOMA BRASILEIRO? ',
         alternativas: {
-            a: 'Floresta Amozônica',
+            a: 'Amazônia',
             b: 'Cerrado',
             c: 'Mata Atlantica',
             d: 'Caatinga'
