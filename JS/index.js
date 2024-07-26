@@ -499,7 +499,7 @@ let questaoRespondida = false;
 let totalCorreto = 0;
 let questaoRestante = [...questoes];
 let score = 100;
-let tempoTotalGasto = 0; // Variável para armazenar o tempo total gasto em respostas corretas
+let tempoTotalGasto = 0; // Irá armazenar o tempo total gasto em respostas corretas
 let tempoInicio; // Variável para armazenar o tempo de início de cada pergunta
 
 
@@ -570,7 +570,7 @@ function proximaQuestao() {
     }
 
     questaoAtual++;
-    tempoInicio = new Date(); // Registra o tempo de início da pergunta
+    tempoInicio = new Date(); // Serve para pegar o tempo de início da pergunta
     temporizador(tempoInicial);
 
     let con = document.createElement('p');
@@ -583,7 +583,7 @@ function verificarResposta(event, alternativa, questao) {
     if (questaoRespondida) return;
     questaoRespondida = true;
 
-    clearTimeout(tempoID); // Para o temporizador
+    clearTimeout(tempoID); // irá parar o temporizador
 
     const item = event.target;
     const respostaCorreta = questao.resposta.toLowerCase();
@@ -591,7 +591,7 @@ function verificarResposta(event, alternativa, questao) {
     const tempoFim = new Date();
     const tempoGasto = Math.floor((tempoFim - tempoInicio) / 1000); // Calcula o tempo gasto em segundos
     
-    tempoTotalGasto += tempoGasto; // Soma o tempo gasto se a resposta for correta
+    tempoTotalGasto += tempoGasto; // Soma o tempo gasto se a resposta estiver certa
     if (alternativa === respostaCorreta) {
         item.classList.add('correta');
         totalCorreto++;
@@ -641,7 +641,7 @@ function temporizador(count) {
 
     contadorDiv.innerHTML = 'Tempo restante: ' + count + ' segundo(s)';
 
-    tempoID = setTimeout(() => {
+    tempoID = setTimeout(() => {           //Temporizador
         if (!questaoRespondida) {
             temporizador(count - 1);
         }
@@ -649,12 +649,12 @@ function temporizador(count) {
 }
 
 
-// Função para abrir o modal
+// Função que irá abrir o modal
 function abrirModal() {
     loginModal.style.display = 'flex';
 }
 
-// Função para fechar o modal
+// Função que irá fechar o modal
 function fecharModal() {
     loginModal.style.display = 'none';
 }
@@ -671,38 +671,32 @@ window.addEventListener('click', (event) => {
 
 // Evento para o envio do formulário de login/registro
 loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Não irá recarregar a página
     let points = (totalCorreto + tempoTotalGasto) / 2 
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('username').value;      //Pega elementos do Formulário 
     const password = document.getElementById('password').value;
    const user = {
     username,
     score:  points,
-    password: CryptoJS.SHA256(password).toString()
+    password: CryptoJS.SHA256(password).toString()  //Hash. não é criptografia!!!
    }
 
     // Armazena os dados de login no localStorage
-    let users = JSON.parse(localStorage.getItem('users'))
+    let users = JSON.parse(localStorage.getItem('users')) // Parse pode converter uma string em objeto
 
       if (!users) {
-        localStorage.setItem('users', JSON.stringify([]))
+        localStorage.setItem('users', JSON.stringify([])) // SetItem adiciona itens ao storage
         users = []
       }
 
-      users.push(user)
+      users.push(user)  // Coloca algum valor dentro de um array
 
-        localStorage.setItem('users', JSON.stringify(users))
+        localStorage.setItem('users', JSON.stringify(users)) // Irá manter o "User" dentro do Storage
     
-
    
     alert(`Bem-vindo, ${username}!`);
     fecharModal();
 });
-
-
-
-
-
 
 // Inicializa o quiz
 iniciarQuiz();
