@@ -517,6 +517,7 @@ function iniciarQuiz() {
     tempoTotalGasto = 0; // Reinicia o tempo total gasto
     displayQuestionDiv.innerHTML = "";
     contadorDiv.innerHTML = "";
+    
     proximaQuestao();
 }
 
@@ -532,7 +533,7 @@ function proximaQuestao() {
         botaoInicio.addEventListener('click', iniciarQuiz);
         displayQuestionDiv.appendChild(botaoInicio);
         
-        contadorDiv.remove(contadorDiv)
+        
        
         const botaoPontuacao = document.createElement('button');
         botaoPontuacao.className = "buttonNext";
@@ -705,3 +706,4 @@ loginForm.addEventListener('submit', (event) => {
 
 // Inicializa o quiz
 iniciarQuiz();
+

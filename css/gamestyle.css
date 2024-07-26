@@ -141,14 +141,11 @@ h4{
 #contador {
 font-size: 20px;
 margin: 10px;
-box-shadow: 10px 10px 20px black;
-border: 2px solid purple;
 padding: 10px 70px;
 border-radius: 20px;
-background-color: #310153;
 font-family:fantasy;
 color: rgb(255, 240, 240); 
-
+text-shadow: 1px 1px 20px black;
 }
 
 #contagemQuest{
