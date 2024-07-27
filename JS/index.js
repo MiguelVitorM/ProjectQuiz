@@ -140,7 +140,7 @@ const questoes = [
         resposta: 'd'
     },
     {
-        enunciado: 'QUAL É A TEMPERATURA QUE  A ÁGUA FERVE? ',
+        enunciado: 'QUAL É A TEMPERATURA QUE A ÁGUA FERVE? ',
         alternativas: {
             a: '208,4°F',
             b: '50°F',
@@ -200,7 +200,7 @@ const questoes = [
         resposta: 'b'
     },
     {
-        enunciado: 'QUEM É CRIOU A ADMINISTRAÇÃO CIENTÍFICA?',
+        enunciado: 'QUEM CRIOU A ADMINISTRAÇÃO CIENTÍFICA?',
         alternativas: {
             a: 'Max Weber',
             b: 'Frederick Taylor',
@@ -250,7 +250,7 @@ const questoes = [
         resposta: 'b'
     },
     {
-        enunciado: 'QUANDO FOI O ANO DO TRETA CAMPEÃO DO BRASIL? ',
+        enunciado: 'QUANDO FOI O ANO DO TETRA CAMPEÃO DO BRASIL? ',
         alternativas: {
             a: '1994',
             b: '1998',
@@ -420,7 +420,7 @@ const questoes = [
         resposta: 'b'
     },
     {
-        enunciado: 'DAS PALAVRAS ABAIXO QUAL É UMA LINGUAGEM DE PROGRAMAÇÃO? ',
+        enunciado: 'DAS PALAVRAS ABAIXO QUAL DELAS É UMA LINGUAGEM DE PROGRAMAÇÃO? ',
         alternativas: {
             a: 'SiseScript',
             b: 'JavaScript',
@@ -493,7 +493,7 @@ const questoes = [
 ]
 let questaoAtual = 0;
 const limiteQuestoes = 10;
-const tempoInicial = 10;
+const tempoInicial = 20;
 let tempoID;
 let questaoRespondida = false;
 let totalCorreto = 0;
