@@ -489,7 +489,106 @@ const questoes = [
         },
         resposta: 'b'
     },
-
+    {
+        enunciado: 'QUANTOS ESTADOS EXISTEM NO BRASIL? ',
+        alternativas: {
+            a: '25',
+            b: '26',
+            c: '27',
+            d: '28'
+        },
+        resposta: 'c'
+    },
+    {
+        enunciado: 'QUAL É A CAPITAL DA NOVA ZELÂNDIA? ',
+        alternativas: {
+            a: 'Washignton',
+            b: 'Abuja',
+            c: 'Nepiedó',
+            d: 'Wellington'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'O QUE SIGNIFICA O NOME DA CIDADE DE ITAMARACÁ ? ',
+        alternativas: {
+            a: 'Pedra que canta',
+            b: 'Pedra no mar',
+            c: 'Ilha que canta',
+            d: 'Ilha que canta'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'SE UM CARRO ESTÁ ANDANDO A 100 KM/H, QUANTOS KM ELE PERCORRERÁ EM 1 HORA ? ',
+        alternativas: {
+            a: '50 KM',
+            b: '100 KM',
+            c: '150 KM',
+            d: '200 KM'
+        },
+        resposta: 'b'
+    },
+    {
+        enunciado: 'COMPLETE A SEQUÊNCIA: 1, 2, 4, 8, 16, ...? ',
+        alternativas: {
+            a: '18',
+            b: '24',
+            c: '30',
+            d: '32'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL É A CAPITAL DO PARANÁ ? ',
+        alternativas: {
+            a: 'Curitiba',
+            b: 'Florianopolis',
+            c: 'Cuiabá',
+            d: 'Rio Branco'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUAL É A IGREJA MAIS ANTIGA DO BRASIL? ',
+        alternativas: {
+            a: 'Basílica da Nossa Senhora do Carmo, Recife-PE',
+            b: 'Convento Santo Antonio, Igarassu-PE',
+            c: 'Igreja Nossa Senhora de Fátima, OLinda-PE',
+            d: 'Igreja Dos Santos Cosme e Damião, Igarassu-PE'
+        },
+        resposta: 'd'
+    },
+    {
+        enunciado: 'QUAL ANO SURGIU O WHATSAPP? ',
+        alternativas: {
+            a: '2009',
+            b: '2010',
+            c: '2011',
+            d: '2012'
+        },
+        resposta: 'a'
+    },
+    {
+        enunciado: 'QUEM FOI A PRIMEIRA EMISSORA DO BRASIL? ',
+        alternativas: {
+            a: 'TV Globo',
+            b: 'TV Tupi',
+            c: 'TV Record',
+            d: 'TV Excelsior'
+        },
+        resposta: 'b'
+    },
+    {
+    enunciado: 'QUAL É O NOME VERDADEIRO DE SILVIO SANTOS? ',
+    alternativas: {
+        a: 'José Abelardo Barbosa de Medeiros,',
+        b: 'Senor Abravanel',
+        c: 'Silvio Santos Abravanel',
+        d: 'Ronaldo Paixão'
+    },
+    resposta: 'b'
+}
 ]
 let questaoAtual = 0;
 const limiteQuestoes = 10;
