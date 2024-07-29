@@ -317,7 +317,7 @@ const questoes = [
             c: '1947',
             d: '1948'
         },
-        resposta: 'b'
+        resposta: 'c'
     },
     {
         enunciado: 'QUAL É A PARTE DO CORPO HUMANO É RESPONSÁVEL PELO OLFATO? ',
