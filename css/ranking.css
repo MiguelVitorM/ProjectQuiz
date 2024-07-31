@@ -18,10 +18,10 @@ html {
   .body{
     margin: 0;
     height: 100vh;
-    background: linear-gradient(45deg, #1f00b9, #310153, #ca02ca, #ca02ca , #01a20c, #02b50e
+    background: linear-gradient(45deg, #adadad,#473891 , #060061, #37288b, #ffffff
     );
     background-size: 300% 300%;
-    animation: gradientAnimation 18s ease infinite;
+    animation: gradientAnimation 6s ease infinite;
     display: flex;
     justify-content: center;
     
@@ -37,11 +37,11 @@ html {
 .gameback{
     margin-left: -1050px;
     margin-top: 10px;
-    box-shadow: 10px 10px 20px rgb(255, 0, 0);
-    border: 2px solid purple;
+    box-shadow: 10px 10px 20px black;
+    border: 2px solid rgb(0, 9, 128);
     padding: 10px 70px;
     border-radius: 30px;
-    background-color: #310153;
+    background: linear-gradient(45deg, blue, rgb(119, 118, 118));
     font-size: 18px;
     font-family:fantasy;
     color: aliceblue; 
@@ -62,12 +62,9 @@ table {
   border: 5px solid rgb(255, 238, 0);
   border-collapse: collapse;
 }
-th,td {
-  border: 5px solid rgb(251, 255, 0);
+th,td{
+  border: 5px solid rgb(0, 0, 0);
   text-align: center;
   padding: 10px;
-}
-tr:nth-child(even){
-  background-color: green
-
+  color:#ffffff
 }

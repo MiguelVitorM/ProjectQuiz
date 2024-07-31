@@ -1,46 +1,55 @@
-const ranking = document.getElementById("containerRank")
-const users = JSON.parse(localStorage.getItem('users') ?? '[]')
-const tabela = document.createElement('table')
+const ranking = document.getElementById("containerRank");
+const users = JSON.parse(localStorage.getItem('users') ?? '[]');
+const tabela = document.createElement('table');
 
-ranking.appendChild(tabela)
+ranking.appendChild(tabela);
 
-const linhaTitulos = document.createElement('thead')
+// Create the table header
+const linhaTitulos = document.createElement('thead');
+const headerRow = document.createElement('tr');
 
-const posicao = document.createElement('th')
-posicao.innerHTML = '#'
+const posicaoHeader = document.createElement('th');
+posicaoHeader.innerHTML = 'Posição';
 
-const nome = document.createElement('th')
-nome.innerHTML = 'Nome'
+const nomeHeader = document.createElement('th');
+nomeHeader.innerHTML = 'Nome';
 
-const score = document.createElement('th')
-score.innerHTML = 'Pontuação'
+const scoreHeader = document.createElement('th');
+scoreHeader.innerHTML = 'Pontuação';
 
-linhaTitulos.append(posicao, nome, score)
+headerRow.append(posicaoHeader, nomeHeader, scoreHeader);
+linhaTitulos.appendChild(headerRow);
 
-tabela.appendChild(linhaTitulos)
+tabela.appendChild(linhaTitulos);
 
-users.sort((a, b) => b.score - a.score)
+// Create the table body
+const tabelaBody = document.createElement('tbody');
+tabela.appendChild(tabelaBody);
 
-let ultimaPosicao = 0
+// Sort users by score in descending order
+users.sort((a, b) => b.score - a.score);
+
+// Initialize ranking position
+let ultimaPosicao = 1;
 
 for (let i = 0; i < users.length; i++) {
-    const linha = document.createElement('tr')
+    const linha = document.createElement('tr');
 
-    const posicao = document.createElement('td')
-
-    if (users[i - 1]?.score != users[i].score) {
-        ultimaPosicao++
+    // Create and fill position cell with degree symbol
+    const posicaoCell = document.createElement('td');
+    if (i > 0 && users[i].score < users[i - 1].score) {
+        ultimaPosicao = i + 1;
     }
+    posicaoCell.innerHTML = ultimaPosicao + '°';
 
-    posicao.innerHTML = ultimaPosicao
+    // Create and fill username cell
+    const usernameCell = document.createElement('td');
+    usernameCell.innerHTML = users[i].username;
 
-    const username = document.createElement('td')
-    username.innerHTML = users[i].username
+    // Create and fill score cell
+    const scoreCell = document.createElement('td');
+    scoreCell.innerHTML = users[i].score;
 
-    const score = document.createElement('td')
-    score.innerHTML = users[i].score
-
-    linha.append(posicao, username, score)
-
-    tabela.appendChild(linha)
-}   
+    linha.append(posicaoCell, usernameCell, scoreCell);
+    tabelaBody.appendChild(linha);
+}

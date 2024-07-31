@@ -18,10 +18,10 @@ html {
   .body{
     margin: 0;
     height: 100vh;
-    background: linear-gradient(45deg, #b94a00, #310153, #ca02ca, #01a20c
+    background: linear-gradient(45deg, #011aa5, #310153, #ca02ca, #a20101
     );
     background-size: 300% 300%;
-    animation: gradientAnimation 15s ease infinite;
+    animation: gradientAnimation 5s ease infinite;
    
 } 
 body {
