@@ -71,6 +71,7 @@ html {
 }
 
 .menuSobre{
+    display: flex;
     margin: 50px;
     align-items: center;
     
@@ -83,10 +84,12 @@ html {
   padding: 10px 70px;
   border-radius: 30px;
   background-color: #310153;
-  font-size: 20px;
+  font-size: 16px;
   font-family:fantasy;
   color: aliceblue; 
   cursor: pointer; 
+  
+  
 }
 
 .button:hover{

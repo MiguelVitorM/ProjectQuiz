@@ -1,60 +1,46 @@
-const ranking = document.getElementsByClassName ("geralRanking")
-const users = JSON.parse(localStorage.getItem('users'))
+const ranking = document.getElementById("containerRank")
+const users = JSON.parse(localStorage.getItem('users') ?? '[]')
+const tabela = document.createElement('table')
 
-let Dados = []
-let Point = []
-let place = []
-let p = 0
+ranking.appendChild(tabela)
 
-if(users){ 
-    for(let user of users){
-        
-        Point.push(user.score)
-        Dados.push([user.username, user.score])
+const linhaTitulos = document.createElement('thead')
+
+const posicao = document.createElement('th')
+posicao.innerHTML = '#'
+
+const nome = document.createElement('th')
+nome.innerHTML = 'Nome'
+
+const score = document.createElement('th')
+score.innerHTML = 'Pontuação'
+
+linhaTitulos.append(posicao, nome, score)
+
+tabela.appendChild(linhaTitulos)
+
+users.sort((a, b) => b.score - a.score)
+
+let ultimaPosicao = 0
+
+for (let i = 0; i < users.length; i++) {
+    const linha = document.createElement('tr')
+
+    const posicao = document.createElement('td')
+
+    if (users[i - 1]?.score != users[i].score) {
+        ultimaPosicao++
     }
-    ordenar()
-}
 
-function ordenar(){
-    let max = Point.reduce(function (a,b){return Math.max(a,b)}) // Dará o maior número do score
-    for(let i =0; i<= Point.length; i++){   // Identificara qual o objeto que tem o maior score
-        if(Point[i]== max){
-            place.push(Dados[i])  
-            Point.splice(i,1)    // Deletará o indice "i" que é o indice 1
-            Dados.splice(i,1)    // Deletará o indicce "i" que é o indice 1
-            
-        }
-    }
-    if(place.length == users.length){ 
-        montar()
-        return
-  } else{
-     ordenar()
-    }
-}
+    posicao.innerHTML = ultimaPosicao
 
-function montar(){
-    for(let l of place){
-        p++
+    const username = document.createElement('td')
+    username.innerHTML = users[i].username
 
-        const editor = document.createElement('geralRanking')
-        editor.classeName = 'geralRanking'
-        document.getElementById('containerRank').appendChild(editor)
+    const score = document.createElement('td')
+    score.innerHTML = users[i].score
 
-        const editorPosition = document.createElement('pr')
-        editorPosition.className=('hashe')
-        editorPosition.innerHTML=p
-        editor.appendChild(editorPosition )
-        
-        const editorName = document.createElement('en')
-        editorName.className=('nome')
-        editorName.innerHTML=l[0]
-        editor.appendChild(editorName)
+    linha.append(posicao, username, score)
 
-        const editorPoint = document.createElement('ep')
-        editorPoint.className=('score')
-        editorPoint.innerHTML=l[1]
-        editor.appendChild(editorPoint)
-
-    }
-}
+    tabela.appendChild(linha)
+}   

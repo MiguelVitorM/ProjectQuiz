@@ -37,7 +37,7 @@ html {
 .gameback{
     margin-left: -1050px;
     margin-top: 10px;
-    box-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 20px rgb(255, 0, 0);
     border: 2px solid purple;
     padding: 10px 70px;
     border-radius: 30px;
@@ -58,35 +58,16 @@ html {
     text-align: center; 
     font-size: 57px;
 }  
-.geralRanking{
-    height: 100px;
-    display: inline-flex;
-    text-align: center; 
-   
+table {
+  border: 5px solid rgb(255, 238, 0);
+  border-collapse: collapse;
 }
-
-.positionRank{
-    height: 100px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 100px;
-   
+th,td {
+  border: 5px solid rgb(251, 255, 0);
+  text-align: center;
+  padding: 10px;
 }
-.rankingName{
-    height: 100px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-   
+tr:nth-child(even){
+  background-color: green
+
 }
-.rankingScore{
-    height: 100px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    
-}
-
-
-
