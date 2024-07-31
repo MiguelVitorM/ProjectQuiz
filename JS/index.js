@@ -771,30 +771,42 @@ window.addEventListener('click', (event) => {
 // Evento para o envio do formulário de login/registro
 loginForm.addEventListener('submit', (event) => {
     event.preventDefault(); // Não irá recarregar a página
-    let points = (totalCorreto + tempoTotalGasto) / 2 
+    let points = (totalCorreto + tempoTotalGasto) / 2
     const username = document.getElementById('username').value;      //Pega elementos do Formulário 
     const password = document.getElementById('password').value;
-   const user = {
-    username,
-    score:  points,
-    password: CryptoJS.SHA256(password).toString()  //Hash. não é criptografia!!!
-   }
+    const user = {
+        username,
+        score: points,
+        password: CryptoJS.SHA256(password).toString()  //Hash. não é criptografia!!!
+    }
 
     // Armazena os dados de login no localStorage
     let users = JSON.parse(localStorage.getItem('users')) // Parse pode converter uma string em objeto
 
-      if (!users) {
+    if (!users) {
         localStorage.setItem('users', JSON.stringify([])) // SetItem adiciona itens ao storage
         users = []
-      }
 
-      users.push(user)  // Coloca algum valor dentro de um array
+    }
+    for (let user of users) {
+        if (user.username == username) {
+            user.score = points
+            localStorage.setItem('users', JSON.stringify(users))
+            alert(`Progresso Salvo com Sucesso, ${username}!`);
+            fecharModal();
+            return
+        }
+    }
 
-        localStorage.setItem('users', JSON.stringify(users)) // Irá manter o "User" dentro do Storage
-    
-   
-    alert(`Bem-vindo, ${username}!`);
+
+    users.push(user)  // Coloca algum valor dentro de um array
+
+    localStorage.setItem('users', JSON.stringify(users)) // Irá manter o "User" dentro do Storage
+
+
+    alert(`Progresso Salvo com Sucesso, ${username}!`);
     fecharModal();
+
 });
 
 // Inicializa o quiz

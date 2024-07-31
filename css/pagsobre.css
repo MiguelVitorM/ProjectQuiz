@@ -56,7 +56,7 @@ body {
           cursor: pointer;
         }
         .back:hover{
-          transform: translateY(-3px);
+          transform: scale(1.2);
           background-color:  #b006b0;
         }
 

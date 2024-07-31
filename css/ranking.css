@@ -1,0 +1,92 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  @keyframes gradientAnimation {  
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #1f00b9, #310153, #ca02ca, #ca02ca , #01a20c, #02b50e
+    );
+    background-size: 300% 300%;
+    animation: gradientAnimation 18s ease infinite;
+    display: flex;
+    justify-content: center;
+    
+  } 
+  .nameRanking{
+    font-family: GodOfWar;
+    font-size: 40px;
+    text-shadow: 10px 5px 20px black ;
+    color: white;
+    text-align: center;
+}
+
+.gameback{
+    margin-left: -1050px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 20px black;
+    border: 2px solid purple;
+    padding: 10px 70px;
+    border-radius: 30px;
+    background-color: #310153;
+    font-size: 18px;
+    font-family:fantasy;
+    color: aliceblue; 
+    cursor: pointer; 
+  }
+  .gameback:hover{
+    transform: scale(1.2);
+    background-color:  #b006b0;
+  }  
+.containerRank{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    font-size: 57px;
+}  
+.geralRanking{
+    height: 100px;
+    display: inline-flex;
+    text-align: center; 
+   
+}
+
+.positionRank{
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100px;
+   
+}
+.rankingName{
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   
+}
+.rankingScore{
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+
+
