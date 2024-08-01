@@ -40,7 +40,9 @@ h4{
   position: relative;
   text-align: center;
   margin: auto auto;
-  top: -70px;
+  justify-content: center;
+  align-content: center;
+  top: -70px; 
   font-family: GodOfWar;
   text-shadow: 10px 5px 5px  rgb(0, 0, 0);
   
@@ -166,14 +168,21 @@ text-shadow: 1px 1px 20px black;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: fantasy;
+  
 }
 
 .modal-content {
-  background-color: white;
+  background: linear-gradient(135deg, yellow, rgb(171, 171, 171), rgb(80, 175, 80));
   padding: 20px;
   border-radius: 5px;
   width: 300px;
   position: relative;
+}
+#loginForm0{
+  display: flex;
+justify-content: center;
+align-items: center;
 }
 
 #closeModal {
@@ -182,4 +191,29 @@ text-shadow: 1px 1px 20px black;
   right: 10px;
   cursor: pointer;
   font-size: 20px;
+}
+label{
+  font-size: 12px;
+}
+#username{
+  border-radius: 15px;
+  background-color: bisque;
+}
+
+.button{
+  align-items: center;
+  margin-top: 20px;
+  background: linear-gradient(135deg, yellow, rgb(171, 171, 171), rgb(80, 175, 80));
+  border-radius: 20px;
+  border:yellowgreen solid 2px;
+  width: 50px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  left: 120px;
+}
+
+.button:hover{
+  transform: scale(1.1);
 }

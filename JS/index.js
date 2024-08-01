@@ -622,8 +622,10 @@ function iniciarQuiz() {
 
 function proximaQuestao() {
     if (questaoAtual >= limiteQuestoes || questaoRestante.length === 0) {
-        
-        displayQuestionDiv.innerHTML = `<h4>Quiz Concluído! <br> Acertos ${totalCorreto}/10 <br> Tempo total gasto: ${tempoTotalGasto} segundo(s)</h4>`;
+        let points = (totalCorreto + tempoTotalGasto) * 10 
+
+
+        displayQuestionDiv.innerHTML = `<h4>Quiz Concluído! <br> Acertos ${totalCorreto}/10 <br> Total de ponto ${points}</h4>`;
         contadorDiv.innerHTML = "";
        
         const botaoInicio = document.createElement('button');
@@ -682,18 +684,19 @@ function verificarResposta(event, alternativa, questao) {
     if (questaoRespondida) return;
     questaoRespondida = true;
 
-    clearTimeout(tempoID); // irá parar o temporizador
+    clearTimeout(tempoID); // Para o temporizador
 
     const item = event.target;
     const respostaCorreta = questao.resposta.toLowerCase();
 
     const tempoFim = new Date();
     const tempoGasto = Math.floor((tempoFim - tempoInicio) / 1000); // Calcula o tempo gasto em segundos
-    
-    tempoTotalGasto += tempoGasto; // Soma o tempo gasto se a resposta estiver certa
+    const tempoRestante = tempoInicial - tempoGasto; // Calcula o tempo restante
+
     if (alternativa === respostaCorreta) {
         item.classList.add('correta');
         totalCorreto++;
+        tempoTotalGasto += tempoRestante; // Soma o tempo restante apenas se a resposta estiver correta
     } else {
         item.classList.add('incorreta');
     }
@@ -770,20 +773,19 @@ window.addEventListener('click', (event) => {
 
 // Evento para o envio do formulário de login/registro
 loginForm.addEventListener('submit', (event) => {
+    let points = (totalCorreto + tempoTotalGasto) * 10 
     event.preventDefault(); // Não irá recarregar a página
-    let points = (totalCorreto + tempoTotalGasto) / 2
     const username = document.getElementById('username').value;      //Pega elementos do Formulário 
-    const password = document.getElementById('password').value;
-    const user = {
+   
+   const user = {
         username,
         score: points,
-        password: CryptoJS.SHA256(password).toString()  //Hash. não é criptografia!!!
-    }
+   }
 
     // Armazena os dados de login no localStorage
     let users = JSON.parse(localStorage.getItem('users')) // Parse pode converter uma string em objeto
 
-    if (!users) {
+      if (!users) {
         localStorage.setItem('users', JSON.stringify([])) // SetItem adiciona itens ao storage
         users = []
 
@@ -799,11 +801,11 @@ loginForm.addEventListener('submit', (event) => {
     }
 
 
-    users.push(user)  // Coloca algum valor dentro de um array
+      users.push(user)  // Coloca algum valor dentro de um array
 
-    localStorage.setItem('users', JSON.stringify(users)) // Irá manter o "User" dentro do Storage
-
-
+        localStorage.setItem('users', JSON.stringify(users)) // Irá manter o "User" dentro do Storage
+    
+   
     alert(`Progresso Salvo com Sucesso, ${username}!`);
     fecharModal();
 
